@@ -5,6 +5,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
+const imagemin = require('gulp-imagemin');
+
 
 
 function scripts() {
@@ -23,6 +25,13 @@ function styles() {
     .pipe(concat('style.min.css'))
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
+}
+
+function img() {
+    return src(['app/img/*'])
+    .pipe(imagemin())
+    .pipe(dest('app/images'))
     .pipe(browserSync.stream())
 }
 
@@ -49,6 +58,7 @@ function building(){
     return src([
         'app/css/style.min.css',
         'app/js/main.min.js',
+        'app/images/*',
         'app/**/*.html'
     ], {base : 'app'})
       .pipe(dest('dist'))
@@ -56,9 +66,10 @@ function building(){
 
 exports.styles = styles;
 exports.scripts = scripts;
+exports.img = img;
 exports.watching = watching;
 exports.browsersync = browsersync;
 
 exports.build = series(cleanDist, building);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, img, browsersync, watching);
