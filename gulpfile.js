@@ -19,7 +19,7 @@ function scripts() {
 }
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src(['app/scss/style.scss'])
     .pipe(concat('style.min.css'))
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(dest('app/css'))
