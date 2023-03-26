@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector('.menu-btn');
 const menuMobaile = document.querySelector('.menu-mobile');
 
+
 menuBtn.addEventListener('click', () => {
   menuMobaile.classList.toggle('menu--open');
 })
