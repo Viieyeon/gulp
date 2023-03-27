@@ -21,7 +21,7 @@ const swiper = new swiper('.swiper', {
 
 });
 
-var swiper_2 = new swiper(".mySwiper", {
+const swiper_2 = new swiper('.mySwiper', {
   slidesPerView: "auto",
   spaceBetween: 30,
   breakpoints: {
@@ -74,3 +74,5 @@ var swiper_2 = new swiper(".mySwiper", {
   },
 
 });
+
+
