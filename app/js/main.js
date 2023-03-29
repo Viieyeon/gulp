@@ -8,20 +8,7 @@ menuBtn.addEventListener('click', () => {
 
 
 
-const swiper = new swiper('.swiper', {
-  loop: false,
-
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-
-});
-
-const swiper_2 = new swiper('.mySwiper', {
+const mySlider = new mySlider('.mySwiper', {
   slidesPerView: "auto",
   spaceBetween: 30,
   breakpoints: {
@@ -61,7 +48,6 @@ const swiper_2 = new swiper('.mySwiper', {
       slidesPerView: 1,
       spaceBetween: 30,
     },
-
 
   },
   pagination: {
