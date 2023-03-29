@@ -366,7 +366,8 @@ header{
     color: #8088A7;
 }
 
-.mySwiper{
+
+.swiper_2{
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -375,6 +376,7 @@ header{
     padding: 0;
     z-index: 1;
 }
+
 
 @media (max-width: 400px){
     .point-decor-1::before,

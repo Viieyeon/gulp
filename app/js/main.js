@@ -4,11 +4,9 @@ const menuMobaile = document.querySelector('.menu-mobile');
 
 menuBtn.addEventListener('click', () => {
   menuMobaile.classList.toggle('menu--open');
-})
+});
 
-
-
-const mySlider = new mySlider('.mySwiper', {
+const swiper_2 = new Swiper(".swiper_2", {
   slidesPerView: "auto",
   spaceBetween: 30,
   breakpoints: {
@@ -59,6 +57,24 @@ const mySlider = new mySlider('.mySwiper', {
     disableOnInteraction: false,
   },
 
+});
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  }
 });
 
 
