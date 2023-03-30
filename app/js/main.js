@@ -6,7 +6,16 @@ menuBtn.addEventListener('click', () => {
   menuMobaile.classList.toggle('menu--open');
 });
 
-const swiper_2 = new Swiper(".swiper_2", {
+
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+
+const swiper_2 = new Swiper('.swiper_2', {
   slidesPerView: "auto",
   spaceBetween: 30,
   breakpoints: {
@@ -57,24 +66,6 @@ const swiper_2 = new Swiper(".swiper_2", {
     disableOnInteraction: false,
   },
 
-});
-
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  }
 });
 
 
